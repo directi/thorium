@@ -1,0 +1,2 @@
+/usr/bin/ar cr libTHO_NpapiPlugin.a  CMakeFiles/THO_NpapiPlugin.dir/NPJavascriptObject.cpp.o CMakeFiles/THO_NpapiPlugin.dir/NPObjectAPI.cpp.o CMakeFiles/THO_NpapiPlugin.dir/NpapiBrowserHost.cpp.o CMakeFiles/THO_NpapiPlugin.dir/NpapiPlugin.cpp.o CMakeFiles/THO_NpapiPlugin.dir/NpapiPluginModule.cpp.o CMakeFiles/THO_NpapiPlugin.dir/NpapiPluginModule_NPP.cpp.o CMakeFiles/THO_NpapiPlugin.dir/NpapiStream.cpp.o CMakeFiles/THO_NpapiPlugin.dir/NpapiTypes.cpp.o CMakeFiles/THO_NpapiPlugin.dir/Mac/NpapiPluginMac.mm.o
+/usr/bin/ranlib libTHO_NpapiPlugin.a

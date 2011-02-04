@@ -1,0 +1,2 @@
+/usr/bin/ar cr libTHO_PluginCommon.a  CMakeFiles/THO_PluginCommon.dir/PluginInfo.cpp.o CMakeFiles/THO_PluginCommon.dir/null/NullLogger.cpp.o
+/usr/bin/ranlib libTHO_PluginCommon.a
