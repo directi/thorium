@@ -48,3 +48,6 @@ set(FBMAC_USE_CARBON 1)
 set(FBMAC_USE_COCOA 1)
 set(FBMAC_USE_COREGRAPHICS 1)
 set(FBMAC_USE_COREANIMATION 0)
+
+add_boost_library(thread)
+add_boost_library(system)
