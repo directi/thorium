@@ -10,6 +10,7 @@
 
 #include "thoriumAPI.h"
 #include "modules/filesystem/filesystem.h"
+#include "modules/network/network_api.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 /// @fn thoriumAPI::thoriumAPI(thoriumPtr plugin, FB::BrowserHostPtr host)
@@ -23,7 +24,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 thoriumAPI::thoriumAPI(thoriumPtr plugin, FB::BrowserHostPtr host) : m_plugin(plugin), m_host(host)
 {
-	registerProperty("filesystem", make_property(this, &thoriumAPI::getFilesystem));
+	registerProperty("filesystem", make_property(this, &thoriumAPI::getFilesystemAPI));
+	registerProperty("network", make_property(this, &thoriumAPI::getNetworkAPI));
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -55,7 +57,13 @@ thoriumPtr thoriumAPI::getPlugin()
 }
 
 
-FB::JSAPIPtr thoriumAPI::getFilesystem()
+FB::JSAPIPtr thoriumAPI::getFilesystemAPI()
 {
 	return th::Filesystem::getInstance();
+}
+
+
+FB::JSAPIPtr thoriumAPI::getNetworkAPI()
+{
+	return th::NetworkAPI::getInstance();
 }

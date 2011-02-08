@@ -22,8 +22,8 @@ public:
 
     thoriumPtr getPlugin();
 
-    // Expose a stub cursor for access to constants
-    FB::JSAPIPtr getFilesystem();
+    FB::JSAPIPtr getFilesystemAPI();
+    FB::JSAPIPtr getNetworkAPI();
     
 
 private:
