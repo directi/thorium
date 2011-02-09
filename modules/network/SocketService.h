@@ -15,7 +15,7 @@ using boost::asio::ip::tcp;
 
 #include <boost/bind.hpp>
 
-namespace ti
+namespace th
 {
 	class SocketService
 	{

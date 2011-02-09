@@ -4,7 +4,7 @@
 
 #include "SocketService.h"
 
-namespace ti
+namespace th
 {
 	std::auto_ptr<boost::asio::io_service> SocketService::io_service(new boost::asio::io_service());
 

@@ -19,8 +19,9 @@ class NetworkAPI: public FB::JSAPIAuto
 		static const boost::shared_ptr<NetworkAPI> getInstance()
 		{ return boost::shared_ptr<NetworkAPI>(new NetworkAPI()); }
 
-		//FB::JSAPIPtr getTCPSocket(const std::string & host, const std::string & port);
-
+		FB::JSAPIPtr getTCPSocket(const std::string & host, const std::string & port);
+	
+		~NetworkAPI();
 	protected:
 		NetworkAPI();
 };
