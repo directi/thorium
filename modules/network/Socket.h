@@ -110,7 +110,7 @@ namespace th
 	template <class T>
 	void Socket<T>::on_error(const std::string& error_text)
 	{
-		this->FireEvent("onError", FB::variant_list_of(error_text));
+			this->FireEvent("onError", FB::variant_list_of(error_text));
 	}
 
 	template <class T>

@@ -16,14 +16,14 @@ namespace th
 class NetworkAPI: public FB::JSAPIAuto
 {
 	public:
-		static const boost::shared_ptr<NetworkAPI> getInstance()
-		{ return boost::shared_ptr<NetworkAPI>(new NetworkAPI()); }
+		static const boost::shared_ptr<NetworkAPI> getInstance();
 
 		FB::JSAPIPtr getTCPSocket(const std::string & host, const std::string & port);
 	
 		~NetworkAPI();
 	protected:
 		NetworkAPI();
+		static boost::shared_ptr<NetworkAPI> instance;
 };
 
 }

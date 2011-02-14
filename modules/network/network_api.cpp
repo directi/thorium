@@ -10,6 +10,15 @@ Copyright Mital Vora <mital.d.vora@gmail.com>
 
 namespace th
 {
+	boost::shared_ptr<NetworkAPI> NetworkAPI::instance;
+	const boost::shared_ptr<NetworkAPI> NetworkAPI::getInstance()
+	{
+		if (!instance.get())
+		{
+			instance.reset(new NetworkAPI());
+		}
+		return NetworkAPI::instance;
+	}
 
 	NetworkAPI::NetworkAPI()
 	{

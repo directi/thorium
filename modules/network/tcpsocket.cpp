@@ -13,8 +13,8 @@ namespace th
 		port(port),
 		resolver(*SocketService::getIOService())
 	{
-		registerEvent("onConnected");
-		
+		registerEvent("onConnect");
+			
 		this->socket = new tcp::socket(*SocketService::getIOService());
 
 		registerMethod("connect", make_method(this, &TCPSocket::connect));

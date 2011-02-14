@@ -6,16 +6,17 @@
 
 namespace th
 {
-	std::auto_ptr<boost::asio::io_service> SocketService::io_service(new boost::asio::io_service());
+	std::auto_ptr<boost::asio::io_service> SocketService::io_service;
 
-	std::auto_ptr<boost::asio::io_service::work> SocketService::io_idlework(
-		new boost::asio::io_service::work(*io_service));
+	std::auto_ptr<boost::asio::io_service::work> SocketService::io_idlework;
 
-	std::auto_ptr<boost::thread> SocketService::io_thread(NULL);
+	std::auto_ptr<boost::thread> SocketService::io_thread;
 
 	void SocketService::initialize()
 	{
-		io_thread.reset(new boost::thread(
+		SocketService::io_service.reset(new boost::asio::io_service());
+		SocketService::io_idlework.reset(new boost::asio::io_service::work(*io_service));
+		SocketService::io_thread.reset(new boost::thread(
 			boost::bind(&boost::asio::io_service::run, SocketService::io_service.get())));
 	}
 	
