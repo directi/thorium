@@ -79,32 +79,3 @@ FB::JSAPIPtr thorium::createJSAPI()
     return FB::JSAPIPtr(new thoriumAPI(FB::ptr_cast<thorium>(shared_ptr()), m_host));
 }
 
-bool thorium::onMouseDown(FB::MouseDownEvent *evt, FB::PluginWindow *)
-{
-    //printf("Mouse down at: %d, %d\n", evt->m_x, evt->m_y);
-    return false;
-}
-
-bool thorium::onMouseUp(FB::MouseUpEvent *evt, FB::PluginWindow *)
-{
-    //printf("Mouse up at: %d, %d\n", evt->m_x, evt->m_y);
-    return false;
-}
-
-bool thorium::onMouseMove(FB::MouseMoveEvent *evt, FB::PluginWindow *)
-{
-    //printf("Mouse move at: %d, %d\n", evt->m_x, evt->m_y);
-    return false;
-}
-bool thorium::onWindowAttached(FB::AttachedEvent *evt, FB::PluginWindow *)
-{
-    // The window is attached; act appropriately
-    return false;
-}
-
-bool thorium::onWindowDetached(FB::DetachedEvent *evt, FB::PluginWindow *)
-{
-    // The window is about to be detached; act appropriately
-    return false;
-}
-

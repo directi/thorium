@@ -42,6 +42,9 @@ set(FBSTRING_FileExtents "")
 set(FBSTRING_PluginName "thorium")
 set(FBSTRING_MIMEType "application/x-thorium")
 
+# disabling the GUI.
+set (FB_GUI_DISABLED 1)
+
 # Mac plugin settings
 set(FBMAC_USE_QUICKDRAW 0)
 set(FBMAC_USE_CARBON 1)
